@@ -14,7 +14,7 @@ def clone_repository(url, dest):
 
 
 def get_project_name(url):
-    regex = re.compile(r".+/(.+)\.git")
+    regex = re.compile(r".+/(.+)\.git?")
     return re.findall(regex, url)[0]
 
 
