@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 import argparse
 import jinja2
 import os
@@ -38,12 +39,19 @@ def write_eclipse_metadata_files():
 
 remote_url = None
 destination = None
-if __name__ == "__main__":
+
+
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("remote_url", help="url of the remote git repository (https or ssh)")
     parser.add_argument("destination", nargs="?", help="directory to clone repository to")
     args = parser.parse_args()
+    global remote_url
+    global destination
     remote_url = args.remote_url
     destination = args.destination
     clone_repository(args.remote_url, args.destination)
     write_eclipse_metadata_files()
+
+if __name__ == "__main__":
+    main()

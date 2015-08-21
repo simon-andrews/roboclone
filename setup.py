@@ -15,5 +15,6 @@ setup(
     license="MIT",
     url="https://github.com/Team4761/roboclone",
     long_description=read("README.md"),
-    install_requires=['Jinja2']
+    install_requires=['Jinja2'],
+    scripts=['bin/roboclone'],
 )
