@@ -3,14 +3,18 @@ import argparse
 import jinja2
 import os
 import re
+import sys
 from templates import classpath_template, project_template
 
 
 def clone_repository(url, dest):
     if dest is not None:
-        os.system("git clone {} {}".format(url, dest))
+        status = os.system("git clone {} {}".format(url, dest))
     else:
-        os.system("git clone {}".format(url))
+        status = os.system("git clone {}".format(url))
+
+    if status != 0:
+        sys.exit(1)
 
 
 def get_project_name(url):
