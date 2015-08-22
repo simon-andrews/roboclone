@@ -7,6 +7,10 @@ Install Instructions
 --------------------
 Open a terminal and run::
 
+   pip install roboclone
+
+If you want the very latest version pushed to git then run::
+
    pip install git+https://github.com/simon-andrews/roboclone.git
 
 Usage
