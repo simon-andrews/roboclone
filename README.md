@@ -1,4 +1,4 @@
-RoboClone
+RoboClone [![Build Status](https://travis-ci.org/simon-andrews/roboclone.svg)](https://travis-ci.org/simon-andrews/roboclone)
 =========
 A neat little script for cloning git repositories containing FRC robot projects
 and configuring them for use with Eclipse.
