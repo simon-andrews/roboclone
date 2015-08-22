@@ -1,15 +1,19 @@
 language: python
-
-#Jinja doesn't support Python 3.2 or lower (http://jinja.pocoo.org/docs/dev/intro/#experimental-python-3-support)
 python:
-  - "2.6"
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "nightly"
-
+- '2.6'
+- '2.7'
+- '3.3'
+- '3.4'
+- nightly
 install:
-  - "pip install ."
-
+- pip install .
 script:
-  - "roboclone https://github.com/Team4761/2015-Robot-Code.git"
+- roboclone https://github.com/Team4761/2015-Robot-Code.git
+deploy:
+  provider: pypi
+  user: simon-andrews
+  password:
+    secure: YmqQc246fSNvwlDeW2Ym61IMw0h9dsYtxUVEZspof3M+x7r2zSiU4kyGtaUrf8SpZiXGyS5T8V5JTDJqbsawq18Gaq4FvC3nTgC4MZV5RQPhqri6W0YIkfSeYQ4EW1G58KXvrml/qGQwCpVLneiSZhaVcZnZAlE7f8S/YlfC6RE6V3cTPI1pntoq2+XxUHJmecQpaT2P2nuAJWl4nohuEE6qblh+YTNb/NlK3fhGqlJYaFX1AY6qOFECaZ8KqihqEpkjSPq8bAjrelHzgbCsGs8aLTaVA5uuUt/SpHe2uWUt7IQVkdfT0Eb2DtqFod/j0tNTaAWEip9ibzHAlHDArsjyWidemXYjfDkw+wD9tyesYX4dOu11ped0/z13bOfe1JTxMaB2yuxziTB3EuA0M+FZaWnLS9SlMw3MkdT4Nz/gOJ5ZL6O1+p3XfgprXLEXBr/RGzejEq/I+A3jMI75W+/ybWyk0U6IoNfhmlEhWoyAzFkjl7LKsNlj6VKXPK+etisiAH0FjUK1B/bBEbzZAgapLIywGiitB+hucaXmvJ/BPI+z/NDk0UDzUD4xchvAmx+NXACtew6IjU9uzxC1JdR80zsIaWKXTWDYFB7Tx7KklTTPAi9pF+h8UAm3CObpqc1sXdx6Tswlue5H8eMTQmrloG5B4St6/gF8jvgP1aI=
+  on:
+    tags: true
+    repo: simon-andrews/roboclone
