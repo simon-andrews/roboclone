@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    from roboclone import roboclone
-    roboclone.main()
+    from roboclone import main
+    main.main()

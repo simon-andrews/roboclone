@@ -6,7 +6,8 @@ classpath_template = """<classpath>
   <classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
   <classpathentry kind="output" path="bin"/>
-</classpath>"""
+</classpath>
+"""
 
 
 project_template = """<?xml version="1.0" encoding="UTF-8"?>
@@ -26,4 +27,5 @@ project_template = """<?xml version="1.0" encoding="UTF-8"?>
         <nature>org.eclipse.jdt.core.javanature</nature>
         <nature>edu.wpi.first.wpilib.plugins.core.nature.FRCProjectNature</nature>
     </natures>
-</projectDescription>"""
+</projectDescription>
+"""
