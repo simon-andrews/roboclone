@@ -8,7 +8,7 @@ def read(file):
 
 setup(
     name="roboclone",
-    version="0.2",
+    version="0.3",
     packages=['roboclone'],
     author="Simon Andrews",
     url="https://github.com/simon-andrews/roboclone",
