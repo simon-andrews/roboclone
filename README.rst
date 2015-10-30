@@ -19,13 +19,16 @@ Now that you have RoboClone installed, it's time to use it! Open a terminal and 
 should show up::
 
    $ roboclone
-   usage: roboclone [-h] remote_url [destination]
+   usage: roboclone [-h] [--gitargs args] [--force [FORCE]]
+                    remote_url [destination]
    roboclone: error: too few arguments
+
 
 Add the `-h` switch to show a help message::
 
    $ roboclone -h
-   usage: roboclone [-h] remote_url [destination]
+   usage: roboclone [-h] [--gitargs args] [--force [FORCE]]
+                    remote_url [destination]
    
    positional arguments:
      remote_url   url of the remote git repository (https or ssh)
@@ -33,6 +36,9 @@ Add the `-h` switch to show a help message::
 
    optional arguments:
      -h, --help   show this help message and exit
+     --gitargs args   extra arguments for git
+     --force [FORCE]  write metadata files even if they already exist in the repo
+
 
 Clone a repository::
 
