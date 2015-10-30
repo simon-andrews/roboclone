@@ -13,7 +13,7 @@ def main():
         repo.clone(outdir=args.destination, gitargs=args.gitargs)
     except GitCloneError:
         sys.exit(1)
-    write_metadata_files(args.destination, repo.name)
+    write_metadata_files(args.destination, repo.name, args.force)
 
 if __name__ == "__main__":
     main()
