@@ -50,11 +50,8 @@ Clone a repository::
    Resolving deltas: 100% (2998/2998), done.
    Checking connectivity... done.
 
-.. |buildstatus| image:: https://img.shields.io/travis/simon-andrews/roboclone.png
+.. |buildstatus| image:: https://img.shields.io/travis/simon-andrews/roboclone.svg
     :target: https://travis-ci.org/simon-andrews/roboclone
 
-.. |pypiversion| image:: https://img.shields.io/pypi/v/roboclone.png
-    :target: https://pypi.python.org/pypi/roboclone/
-
-.. |pypidownloads| image:: https://img.shields.io/pypi/dm/roboclone.png
+.. |pypiversion| image:: https://img.shields.io/pypi/v/roboclone.svg
     :target: https://pypi.python.org/pypi/roboclone/
