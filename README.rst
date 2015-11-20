@@ -1,4 +1,4 @@
-RoboClone |buildstatus| |pypiversion| |pypidownloads|
+RoboClone |buildstatus| |pypiversion|
 =========================================================================================================================================
 A neat little script for cloning git repositories containing FRC robot projects
 and configuring them for use with Eclipse.
