@@ -1,16 +1,16 @@
 import jinja2
 import os
-from .templates import classpath_template, project_template
+from .templates import _classpath_template, _project_template
 
 def _render_project_file(project_name):
-    template = jinja2.Template(project_template)
+    template = jinja2.Template(_project_template)
     return template.render(project_name=project_name)
 
 
 def _write_classpath_file(destination):
     classpath_file = os.path.join(destination, ".classpath")
     with open(os.path.join(classpath_file), "w") as f:
-        f.write(classpath_template)
+        f.write(_classpath_template)
 
 
 def _write_project_file(destination, project_name):

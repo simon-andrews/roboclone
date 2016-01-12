@@ -1,6 +1,6 @@
 # I'm disgusting. I know.
 
-classpath_template = """<classpath>
+_classpath_template = """<classpath>
   <classpathentry kind="src" path="src"/>
   <classpathentry kind="var" path="wpilib" sourcepath="wpilib.sources"/>
   <classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
@@ -10,7 +10,7 @@ classpath_template = """<classpath>
 """
 
 
-project_template = """<?xml version="1.0" encoding="UTF-8"?>
+_project_template = """<?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
     <name>{{ project_name }}</name>
     <comment></comment>
