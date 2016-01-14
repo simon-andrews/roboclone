@@ -8,14 +8,14 @@ def read(file):
 
 setup(
     name="roboclone",
-    version="0.3",
+    version="1.0",
     packages=['roboclone'],
     author="Simon Andrews",
     url="https://github.com/simon-andrews/roboclone",
     description="A script for cloning FRC robot projects and configuring them for Eclipse",
     long_description=read("README.rst"),
     license="MIT",
-    install_requires=['Jinja2'],
+    install_requires=['GitPython', 'Jinja2'],
     scripts=['bin/roboclone'],
     classifiers=[
         "Development Status :: 4 - Beta",

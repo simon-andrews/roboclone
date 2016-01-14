@@ -1,1 +1,3 @@
-Jinja2>=2.7
+GitPython
+Jinja2
+progressbar2

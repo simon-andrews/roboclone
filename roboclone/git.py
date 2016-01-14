@@ -1,22 +1,18 @@
-import os
-import re
+from git.repo.base import Repo
+from git.remote import RemoteProgress
+import math
+import sys
 
 
-class GitCloneError(Exception):
-    def __init__(self, message):
-        self.message = message
+class ProgressPrinter(RemoteProgress):
+    prev_pos = 0
+
+    def update(self, op_code, cur_count, max_count=None, message=''):
+        percent = math.floor(cur_count / (max_count or 100.0) * 100)
+        if percent <= 100:
+            sys.stdout.write("\r%d" % percent)
+            sys.stdout.flush()
 
 
-class Repository:
-    def __init__(self, url):
-        self.url = url
-        self.name = re.findall(r".+/(.+)\.git?", self.url)[0]
-
-    def clone(self, outdir, gitargs=None):
-        if outdir is None:
-            outdir = self.name
-        if gitargs is None:
-            gitargs = ''
-        status = os.system("git clone {url} {outdir} {args}".format(url=self.url, outdir=outdir, args=gitargs))
-        if status != 0:
-            raise GitCloneError("Running of git-clone failed with status code {}".format(status))
+def clone(uri, path):
+    return Repo.clone_from(uri, path, progress=ProgressPrinter())
