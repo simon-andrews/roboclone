@@ -20,35 +20,28 @@ should show up::
 
    $ roboclone
    usage: roboclone [-h] [--gitargs args] [--force [FORCE]]
-                    remote_url [destination]
-   roboclone: error: too few arguments
-
+                    remote_url destination
+   roboclone: error: the following arguments are required: remote_url, destination
 
 Add the `-h` switch to show a help message::
 
    $ roboclone -h
    usage: roboclone [-h] [--gitargs args] [--force [FORCE]]
-                    remote_url [destination]
-   
+                    remote_url destination
+
    positional arguments:
-     remote_url   url of the remote git repository (https or ssh)
-     destination  directory to clone repository to
+     remote_url       url of the remote git repository (https or ssh)
+     destination      directory to clone repository to
 
    optional arguments:
-     -h, --help   show this help message and exit
+     -h, --help       show this help message and exit
      --gitargs args   extra arguments for git
      --force [FORCE]  write metadata files even if they already exist in the repo
 
-
 Clone a repository::
 
-   $ roboclone https://github.com/Team4761/2015-Robot-Code.git
-   Cloning into '2015-Robot-Code'...
-   remote: Counting objects: 6211, done.
-   remote: Total 6211 (delta 0), reused 0 (delta 0), pack-reused 6211
-   Receiving objects: 100% (6211/6211), 2.17 MiB | 650.00 KiB/s, done.
-   Resolving deltas: 100% (2998/2998), done.
-   Checking connectivity... done.
+   $ roboclone https://github.com/Team4761/2015-Robot-Code.git 2015-Robot-Code
+   100%
 
 .. |buildstatus| image:: https://img.shields.io/travis/simon-andrews/roboclone.svg
     :target: https://travis-ci.org/simon-andrews/roboclone

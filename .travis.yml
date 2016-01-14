@@ -8,7 +8,7 @@ python:
 install:
 - pip install .
 script:
-- roboclone https://github.com/Team4761/2015-Robot-Code.git
+- roboclone https://github.com/Team4761/2015-Robot-Code.git 2015-Robot-Code
 deploy:
   provider: pypi
   user: simon-andrews
